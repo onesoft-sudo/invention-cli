@@ -5,6 +5,7 @@
     "bin": ["bin/console"],
     "require": {
         "symfony/console": "^6.0",
+        "osn/invention-framework": "dev-main",
         "php": ">=8.0"
     },
     "license": "GPL-v3-or-later",
