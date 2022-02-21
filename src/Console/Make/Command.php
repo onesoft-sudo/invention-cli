@@ -4,7 +4,7 @@
 namespace OSN\Invention\CLI\Console\Make;
 
 
-use OSN\Invention\Utils\Generator;
+use OSN\Invention\CLI\Utils\Generator;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

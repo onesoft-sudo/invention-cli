@@ -56,7 +56,7 @@ class ModelCommand extends Command
         if ($migration) {
             $tbl = strtolower($name);
             $this->getApplication()->find('make:migration')->run(new ArrayInput([
-                'name' => "create_{$tbl}_table",
+                'name' => "create_{$tbl}s_table",
                 'table' => $tbl
             ]), $output);
         }

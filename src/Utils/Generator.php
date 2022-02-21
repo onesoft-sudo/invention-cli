@@ -1,8 +1,10 @@
 <?php
 
 
-namespace OSN\Invention\Utils;
+namespace OSN\Invention\CLI\Utils;
 
+
+use OSN\Framework\Console\App;
 
 class Generator
 {

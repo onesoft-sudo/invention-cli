@@ -1,8 +1,9 @@
 <?php
 
-namespace OSN\Invention\Utils;
+namespace OSN\Invention\CLI\Utils;
 
 use Closure;
+use OSN\Framework\Console\App;
 use OSN\Framework\Core\Database;
 use OSN\Framework\Core\Migration;
 use PDO;
