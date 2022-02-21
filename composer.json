@@ -1,0 +1,22 @@
+{
+    "name": "osn/invention-cli",
+    "description": "The Invention Framework Command-Line Tool",
+    "type": "library",
+    "bin": ["bin/console"],
+    "require": {
+        "symfony/console": "^6.0",
+        "php": ">=8.0"
+    },
+    "license": "GPL-v3-or-later",
+    "autoload": {
+        "psr-4": {
+            "OSN\\Invention\\CLI\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ar Rakin",
+            "email": "rakinar2@gmail.com"
+        }
+    ]
+}
