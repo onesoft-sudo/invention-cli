@@ -1,9 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-defined('AUTOLOAD_FILE') || define('AUTOLOAD_FILE', __DIR__ . "/vendor/autoload.php");
+defined('ROOT_DIR') || define('ROOT_DIR', __DIR__);
 
-require AUTOLOAD_FILE;
+require ROOT_DIR . '/vendor/autoload.php';
 
 use OSN\Framework\Console\App;
 use OSN\Invention\CLI\Console\Clear\CacheCommand;
@@ -24,7 +24,7 @@ use OSN\Invention\CLI\Console\Migrate\RebuildCommand;
 use OSN\Invention\CLI\Console\Migrate\ResetCommand;
 use OSN\Invention\CLI\Console\ServeCommand;
 
-$app = new App(__DIR__);
+$app = new App(ROOT_DIR);
 
 // -- migrate:* --
 $app->add(new MigrateCommand());
