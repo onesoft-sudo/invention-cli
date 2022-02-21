@@ -4,7 +4,7 @@
     "type": "library",
     "bin": ["bin/console"],
     "require": {
-        "symfony/console": "^6.0",
+        "symfony/console": "^5.4",
         "osn/invention-framework": "dev-main",
         "php": ">=8.0"
     },
