@@ -3,7 +3,7 @@
 
 namespace OSN\Invention\CLI\Console\Migrate;
 
-use OSN\Invention\Utils\Migrations;
+use OSN\Invention\CLI\Utils\Migrations;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
