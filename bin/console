@@ -1,7 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__ . "/../autoload.php";
+defined('AUTOLOAD_FILE') || define('AUTOLOAD_FILE', __DIR__ . "/vendor/autoload.php");
+
+require AUTOLOAD_FILE;
 
 use OSN\Framework\Console\App;
 use OSN\Invention\CLI\Console\Clear\CacheCommand;
