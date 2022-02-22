@@ -1,2 +1,3 @@
-# invention-cli
+# Invention CLI 
+
 The invention framework CLI.
