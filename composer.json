@@ -8,7 +8,7 @@
         "osn/invention-framework": "dev-main",
         "php": ">=8.0"
     },
-    "license": "GPL-3.0-or-later",
+    "license": "Apache-2.0",
     "autoload": {
         "psr-4": {
             "OSN\\Invention\\CLI\\": "src/"
