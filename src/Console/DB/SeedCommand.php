@@ -14,7 +14,8 @@ class SeedCommand extends Command
 {
     protected static $defaultName = "db:seed";
     protected static $defaultDescription = "Run the seeders";
-    public array $seeded = [];
+    public static array $seeded = [];
+    public static OutputInterface $output;
 
     protected function configure()
     {
@@ -24,28 +25,29 @@ class SeedCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        static::$output = $output;
         $seeders = scandir(basepath('/database/seeders'));
 
         foreach ($seeders as $seeder) {
             if (!is_dir($seeder)) {
                 $seederClass = "Database\\Seeders\\" . pathinfo($seeder, PATHINFO_FILENAME);
-                $this->seedOne($seederClass, $output);
+                $this->seedOne($seederClass);
             }
         }
 
         return 0;
     }
 
-    protected function seedOne(string $seederClass, OutputInterface $output)
+    public static function seedOne(string $seederClass)
     {
-        if (in_array($seederClass, $this->seeded))
+        if (in_array($seederClass, static::$seeded))
             return;
 
         /** @var Seeder $seederObject */
         $seederObject = new $seederClass();
-        $output->writeln("\033[1;33mSeeding: \033[0m" . $seederClass);
+        static::$output->writeln("\033[1;33mSeeding: \033[0m" . $seederClass);
         $seederObject->seed();
-        $output->writeln("\033[1;32mSeeded: \033[0m" . $seederClass);
-        $this->seeded[] = $seederClass;
+        static::$output->writeln("\033[1;32mSeeded: \033[0m" . $seederClass);
+        static::$seeded[] = $seederClass;
     }
 }
