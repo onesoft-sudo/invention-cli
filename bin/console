@@ -10,6 +10,7 @@ use OSN\Invention\CLI\Console\Clear\CacheCommand;
 use OSN\Invention\CLI\Console\DB\SeedCommand;
 use OSN\Invention\CLI\Console\Make\CliScriptCommand;
 use OSN\Invention\CLI\Console\Make\CommandCommand;
+use OSN\Invention\CLI\Console\Make\ComponentCommand;
 use OSN\Invention\CLI\Console\Make\ControllerCommand;
 use OSN\Invention\CLI\Console\Make\ExceptionCommand;
 use OSN\Invention\CLI\Console\Make\FactoryCommand;
@@ -43,6 +44,7 @@ $app->add(new CommandCommand());
 $app->add(new ExceptionCommand());
 $app->add(new InitializerCommand());
 $app->add(new RequestCommand());
+$app->add(new ComponentCommand());
 $app->add(new TestCommand());
 // --/ make:* --
 
